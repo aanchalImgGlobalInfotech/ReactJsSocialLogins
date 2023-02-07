@@ -1,0 +1,13 @@
+.twitter-button button {
+    background-color: rgb(68, 168, 255) !important;
+    border-radius: 25px !important;
+    font-size: medium !important;
+    padding: 3px 35px 3px 35px !important;
+    text-align: center !important;
+    height: 42px !important;
+    width: 290px !important;
+}
+
+.twitter-button button div div {
+    margin-left: 10px;
+}
