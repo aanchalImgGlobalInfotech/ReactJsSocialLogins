@@ -9,6 +9,7 @@ import LinkedInButton from './components/LinkedInButton';
 import GitHubButton from './components/GitHubButton';
 import InstagramButton from './components/InstagramButton';
 import TwitterButton from './components/TwitterButton';
+import PinterestButton from './components/PinterestButton';
 
 function App() {
   const [user, setUser] = useState({ name: '' })
@@ -45,12 +46,15 @@ function App() {
 
           {/* github login */}
           <GitHubButton user={user} setUser={setUser} />
-        
+
           {/* instagram login */}
           <InstagramButton user={user} setUser={setUser} />
 
           {/* twitter login */}
           <TwitterButton user={user} setUser={setUser} />
+
+          {/* twitter login */}
+          <PinterestButton user={user} setUser={setUser} />
 
         </div>
 
