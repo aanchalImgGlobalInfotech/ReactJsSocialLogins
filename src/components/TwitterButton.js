@@ -52,16 +52,16 @@ import axios from "axios";
 import React, { useState } from "react";
 import ReactTwitterLogin from "react-twitter-login";
 export default function TwitterLogin() {
-  const [tiw , setTiw] = useState()
+  const [tiw, setTiw] = useState()
 
-    const authHandler = (error, data) => {
-    if (error) return console.error(error);
-    console.log('res',data);
+  const authHandler = (error, data) => {
+    // if (error) return console.error(error);
+    // console.log('res',data);
 
-    axios.get(`https://api.twitter.com/1.1/users/show.json?screen_name=${data.screen_name}`)
-    .then((res)=>{
-          console.log('res',res)
-    })
+    // axios.get(`https://api.twitter.com/1.1/users/show.json?screen_name=${data.screen_name}`)
+    // .then((res)=>{
+    //       console.log('res',res)
+    // })
 
 
   };
@@ -70,7 +70,8 @@ export default function TwitterLogin() {
       authCallback={authHandler}
       consumerKey="MQf93eOynPQxsbdLUvxPfB8yT" // We created this, remember?
       consumerSecret="jFsfMWRBTKKrW6QTcTESkPEuRcMa3XS0Is5skH39eIxdkkZ6Bk" // We created this, remember?
-      callbackUrl="https://75b5-2401-4900-1c1b-a4e0-1cf-c517-3041-2a52.in.ngrok.io/" // You set this up in the twitter app settings, remember?
+      callbackUrl="http://localhost:3000/" // You set this up in the twitter app settings, remember?
+      // callbackUrl="https://75b5-2401-4900-1c1b-a4e0-1cf-c517-3041-2a52.in.ngrok.io/" // You set this up in the twitter app settings, remember?
     />
   );
 }

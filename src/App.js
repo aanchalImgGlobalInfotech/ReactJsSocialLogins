@@ -10,6 +10,8 @@ import GitHubButton from './components/GitHubButton';
 import InstagramButton from './components/InstagramButton';
 import TwitterButton from './components/TwitterButton';
 import PinterestButton from './components/PinterestButton';
+import MicrosoftButton from './components/MicrosoftButton';
+import AppleButton from './components/AppleButton';
 
 function App() {
   const [user, setUser] = useState({ name: '' })
@@ -56,6 +58,11 @@ function App() {
           {/* twitter login */}
           <PinterestButton user={user} setUser={setUser} />
 
+          {/* microsoft login */}
+          <MicrosoftButton user={user} setUser={setUser} />
+
+          {/* Apple login */}
+          <AppleButton user={user} setUser={setUser} />
         </div>
 
         <div>

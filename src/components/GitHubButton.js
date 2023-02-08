@@ -4,27 +4,23 @@ import { GithubLoginButton } from 'react-social-login-buttons'
 import { LoginSocialGithub } from 'reactjs-social-login'
 import './githubbutton.css'
 
-const GitHubButton = ({user, setUser}) => {
+const GitHubButton = ({ user, setUser }) => {
   const [response, setResponse] = useState()
 
   const onResolve = (response) => {
     setResponse(response.data)
     localStorage.setItem('access-token', response.data.access_token)
-  }
 
-  const getData = async () => {
     const token = localStorage.getItem('access-token')
-    const data = await axios.get(`https://api.github.com/user`, {
+    axios.get(`https://api.github.com/user`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
-    })
-    setUser(() => ({ name: data.data.login }))
+    }).then(res => setUser(() => ({ name: res.data.login })))
+    .catch(err=>console.log('err from github' , err))
+
   }
 
-  useEffect(() => {
-    getData()
-  }, [response])
 
 
   return (

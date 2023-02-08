@@ -18,7 +18,8 @@ const InstagramButton = ({ user, setUser }) => {
             client_id={880291606357501}
             client_secret={'dfc81e40bc6a4f2472cb6480d62e9319'}
             // redirect_uri={'https://localhost:3000/account/login'}
-            redirect_uri={'https://github.com/'}
+            redirect_uri={'http://localhost:3000/'}
+            // redirect_uri={'https://github.com/'}
             onLoginStart={()=>console.log('login start')}
             onResolve={({ provider, data }) => {
                 // setProvider(provider)
