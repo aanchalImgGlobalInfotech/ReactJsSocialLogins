@@ -18,8 +18,8 @@ function App() {
   console.log('from home user', user)
   return (
     <div className="App">
-      <h1>{user.name}</h1>
-      <div className='buttons' >
+      <h1>{ user.name? user.name :'Guest'}  </h1>
+      <div className='buttons'>
         <div>
    
           <GoogleOAuthProvider clientId="982720211218-sff1kmm6ggjtnq8hhr2adbvhbt4fe2un.apps.googleusercontent.com">

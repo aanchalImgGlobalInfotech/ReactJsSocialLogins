@@ -62,16 +62,16 @@ export default function TwitterLogin() {
     // .then((res)=>{
     //       console.log('res',res)
     // })
-
-
-  };
+  }
   return (
     <ReactTwitterLogin
       authCallback={authHandler}
-      consumerKey="MQf93eOynPQxsbdLUvxPfB8yT" // We created this, remember?
-      consumerSecret="jFsfMWRBTKKrW6QTcTESkPEuRcMa3XS0Is5skH39eIxdkkZ6Bk" // We created this, remember?
-      callbackUrl="http://localhost:3000/" // You set this up in the twitter app settings, remember?
-      // callbackUrl="https://75b5-2401-4900-1c1b-a4e0-1cf-c517-3041-2a52.in.ngrok.io/" // You set this up in the twitter app settings, remember?
+      consumerKey="MQf93eOynPQxsbdLUvxPfB8yT"
+      consumerSecret="jFsfMWRBTKKrW6QTcTESkPEuRcMa3XS0Is5skH39eIxdkkZ6Bk"
+      // consumerKey="N2g5dHlvMWJWTnZhbVRBQk1fcHI6MTpjaQ"
+      // consumerSecret="hYhXVsZ5QJSkQpaTkXT1HkKLGn6nwELvHLIEAKI8fZrLVTyVM1"
+      callbackUrl="http://localhost:3000/"
+    // callbackUrl="https://75b5-2401-4900-1c1b-a4e0-1cf-c517-3041-2a52.in.ngrok.io/" 
     />
   );
 }

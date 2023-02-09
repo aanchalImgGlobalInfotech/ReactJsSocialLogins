@@ -3,13 +3,12 @@ import { LoginSocialFacebook } from 'reactjs-social-login';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 import './facebookbutton.css'
 
-const FacebookButton = ({user, setUser}) => {
+const FacebookButton = ({ user, setUser }) => {
 
-    const onResolve = (response)=>{
-         console.log('from fb login',response.data)  
-         setUser(()=>({name:response.data.name}))
-
-    } 
+    const onResolve = (response) => {
+        console.log('from fb login', response.data)
+        setUser(() => ({ name: response.data.name }))
+    }
     return (
         <div>
             <LoginSocialFacebook
@@ -20,7 +19,6 @@ const FacebookButton = ({user, setUser}) => {
             >
                 <FacebookLoginButton />
             </LoginSocialFacebook>
-
         </div>
     )
 }
