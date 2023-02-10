@@ -15,8 +15,8 @@ const InstagramButton = ({ user, setUser }) => {
     return (
         <LoginSocialInstagram
             isOnlyGetToken
-            client_id={880291606357501}
-            client_secret={'dfc81e40bc6a4f2472cb6480d62e9319'}
+            client_id={process.env.REACT_APP_INSTAGRAM_CLIENT_ID}
+            client_secret={process.env.REACT_APP_INSTAGRAM_CLIENT_SECRET}
             // redirect_uri={'https://localhost:3000/account/login'}
             redirect_uri={'http://localhost:3000/'}
             // redirect_uri={'https://github.com/'}

@@ -1,11 +1,11 @@
-.pinterest-btn {
+.pinterest-button {
     display: flex;
     justify-content: space-evenly;
     font-size: 16px;
     background: #e40114;
     border-radius: 25px;
     color: white;
-    padding: 9px 1px 9px 1px  ;
+    padding: 9px 1px 9px 1px;
     width: 290px;
     min-width: 200px;
     margin-left: 5px;

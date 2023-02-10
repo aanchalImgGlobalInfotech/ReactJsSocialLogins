@@ -26,8 +26,8 @@ const GitHubButton = ({ user, setUser }) => {
   return (
     <LoginSocialGithub
       isOnlyGetToken
-      client_id={"fb4d4f5623cfffdbf51b"}
-      client_secret={"6a4f4fd44a2ca67bf80fad5f20057e1830647775"}
+      client_id={process.env.REACT_APP_GITHUB_CLIENT_ID}
+      client_secret={process.env.REACT_APP_GITHUB_CLIENT_SECRET}
       redirect_uri={'http://localhost:3000'}
       // onLoginStart={onLoginStart}
       onResolve={onResolve}

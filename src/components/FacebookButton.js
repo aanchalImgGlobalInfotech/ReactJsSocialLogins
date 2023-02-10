@@ -10,16 +10,14 @@ const FacebookButton = ({ user, setUser }) => {
         setUser(() => ({ name: response.data.name }))
     }
     return (
-        <div>
-            <LoginSocialFacebook
-                appId='1342510699918475'
-                onResolve={onResolve}
-                onReject={reject => console.log(reject)}
-                className="facebook-button"
-            >
-                <FacebookLoginButton />
-            </LoginSocialFacebook>
-        </div>
+        <LoginSocialFacebook
+            appId={process.env.REACT_APP_FACEBOOK_APP_ID}
+            onResolve={onResolve}
+            onReject={reject => console.log(reject)}
+            className="facebook-button"
+        >
+            <FacebookLoginButton />
+        </LoginSocialFacebook>
     )
 }
 

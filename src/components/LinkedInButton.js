@@ -19,7 +19,7 @@ const LinkedInButton = ({ user, setUser }) => {
             // axios.get(`https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=866rdyg06xl0uj&redirect_uri=http://localhost:3000/&state=${state}&scope=r_liteprofile%20r_emailaddress%20w_member_social`, {
             // axios.get(`https://www.linkedin.com/oauth/v2/accessToken?code=${response.data.access_token}&grant_type=authorization_code&client_id=866rdyg06xl0uj&client_secret=SeI7gkxnU2O0UIVU&redirect_uri=http://localhost:3000/`, {
             // axios.get('https://api.linkedin.com/v2/jobs', {
-                // axios.post('https://www.linkedin.com/oauth/v2/accessToken', {
+            // axios.post('https://www.linkedin.com/oauth/v2/accessToken', {
             axios.get('https://api.linkedin.com/v2/me', {
                 headers: {
                     Connection: "Keep - Alive",
@@ -53,8 +53,8 @@ const LinkedInButton = ({ user, setUser }) => {
         <>
             <LoginSocialLinkedin
                 isOnlyGetToken
-                client_id='866rdyg06xl0uj'
-                client_secret='SeI7gkxnU2O0UIVU'
+                client_id={process.env.REACT_APP_LINKEDIN_CLIENT_ID}
+                client_secret={process.env.REACT_APP_LINKEDIN_CLIENT_SECRET}
                 redirect_uri='http://localhost:3000/'
                 // redirect_uri={'https://www.linkedin.com/developers/tools/oauth/redirect'}
                 // redirect_uri={'https://www.google.com'}
@@ -65,7 +65,7 @@ const LinkedInButton = ({ user, setUser }) => {
                 }}
                 className="linkedin-button"
             >
-                <LinkedInLoginButton  />
+                <LinkedInLoginButton />
             </LoginSocialLinkedin>
             {/* <button onClick={loginWithLinkedIn} >Click</button> */}
         </>

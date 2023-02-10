@@ -5,8 +5,8 @@ const PinterestButton = () => {
   return (
     <LoginSocialPinterest
       isOnlyGetToken
-      client_id={'1484121'}
-      client_secret={'pina_AMAVTJIWACRR4AQAGAAJEDJIBRZTJBQBQBIQDAVUT4Y5QTZGJAR36HDIJ4SR7MNPSUJT7D5R52HOOH6NWRBPR2NPNHFNUKAA'}
+      client_id={process.env.REACT_APP_PINTEREST_CLIENT_ID}
+      client_secret={process.env.REACT_APP_PINTEREST_CLIENT_SECRET}
       // redirect_uri={REDIRECT_URI}
       // onLoginStart={onLoginStart}
       onResolve={({ provider, data }) => {
@@ -16,7 +16,7 @@ const PinterestButton = () => {
       onReject={(err) => {
         console.log(err)
       }}
-      className='pinterest-btn'
+      className='pinterest-button'
     >
       <div className='content'>
         <i className="fab fa-pinterest pinterest-icon "></i>

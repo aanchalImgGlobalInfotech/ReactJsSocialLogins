@@ -7,13 +7,13 @@ const MicrosoftButton = () => {
     return (
         <LoginSocialMicrosoft
             isOnlyGetToken
-            client_id={'58dc96fe-33da-46a2-8393-a0a514b1bfed'}
+            client_id={process.env.REACT_APP_MICROSOFT_CLIENT_ID}
             redirect_uri={"http://localhost:3000/"}
-            onLoginStart={()=>console.log('login start')}
+            onLoginStart={() => console.log('login start')}
             onResolve={({ provider, data }) => {
                 // setProvider(provider)
                 // setProfile(data)
-                console.log('MS data', data )
+                console.log('MS data', data)
             }}
             onReject={(err) => {
                 console.log(err)

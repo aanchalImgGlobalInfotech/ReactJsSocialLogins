@@ -8,7 +8,7 @@ const TwitterButton = ({ user, setUser }) => {
   return (
     <LoginSocialTwitter
       isOnlyGetToken
-      client_id={"MQf93eOynPQxsbdLUvxPfB8yT"}
+      client_id={process.env.REACT_APP_TWITTER_CLIENT_ID}
       redirect_uri={'https://75b5-2401-4900-1c1b-a4e0-1cf-c517-3041-2a52.in.ngrok.io/'}
       // onLoginStart={onLoginStart}
       onResolve={({ provider, data }) => {

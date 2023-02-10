@@ -1,6 +1,6 @@
 import './App.css';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
-import { } from '@react-oauth/google';
+// import { } from '@react-oauth/google';
 import jwt_decode from 'jwt-decode'
 import { useState } from 'react';
 import GoogleButton from './components/GoogleButton';
@@ -22,10 +22,8 @@ function App() {
       <div className='buttons'>
         <div>
 
-          <GoogleOAuthProvider clientId="982720211218-sff1kmm6ggjtnq8hhr2adbvhbt4fe2un.apps.googleusercontent.com">
-
-            {/* google login */}
-
+          {/* google login */}
+          <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
             {/* <GoogleLogin
             onSuccess={credentialResponse => {
               const details = jwt_decode(credentialResponse.credential)
@@ -63,10 +61,6 @@ function App() {
 
           {/* Apple login */}
           <AppleButton user={user} setUser={setUser} />
-        </div>
-
-        <div>
-
         </div>
       </div>
     </div>
