@@ -1,6 +1,6 @@
 import React from 'react'
 import { LoginSocialPinterest } from 'reactjs-social-login'
-
+import './pinterestbutton.css'
 const PinterestButton = () => {
   return (
     <LoginSocialPinterest
@@ -19,10 +19,8 @@ const PinterestButton = () => {
       className='pinterest-btn'
     >
       <div className='content'>
-        <div className='icon'>
-          {/* <PinterestLogo /> */}
-        </div>
-        <span className='txt' style={{border:'2px  solid #e40114' , backgroundColor:'#e40114' , color:"white"}} >Login With Pinterest</span>
+        <i className="fab fa-pinterest pinterest-icon "></i>
+        <span className='txt'>Login With Pinterest</span>
       </div>
     </LoginSocialPinterest>
   )

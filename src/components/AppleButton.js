@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppleLoginButton } from 'react-social-login-buttons';
 import { LoginSocialApple } from 'reactjs-social-login';
-
+import './applebutton.css'
 const AppleButton = () => {
     return (
         <LoginSocialApple
@@ -16,6 +16,7 @@ const AppleButton = () => {
             onReject={err => {
                 console.log(err);
             }}
+            className='apple-button'
         >
             <AppleLoginButton />
         </LoginSocialApple>

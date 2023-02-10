@@ -25,8 +25,10 @@ const GoogleButton = ({ setUser, user }) => {
         },
 
     })
-    return (
-        <button className='google-button' onClick={login} > <i className="fab fa-google my-icon "></i> CONTINUE WITH GOOGLE</button>
+    return (<div className='google-button' >
+        <i className="fab fa-google my-icon "></i>
+        <button className='button' onClick={login}>Log in with Google</button>
+    </div>
     )
 }
 

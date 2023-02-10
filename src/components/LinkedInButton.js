@@ -38,16 +38,16 @@ const LinkedInButton = ({ user, setUser }) => {
         // setUser(() => ({ name: response.data.name }))
     }
 
-    const loginWithLinkedIn = () => {
-        axios.post('https://www.linkedin.com/oauth/v2/accessToken', {
-            headers: {
-                'Content-Type': 'application/ x - www - form - urlencoded',
-                grant_type: "client_credentials",
-                client_id: "866rdyg06xl0uj",
-                client_secret: 'SeI7gkxnU2O0UIVU',
-            }
-        }).then((res)=>console.log('response',res))
-    }
+    // const loginWithLinkedIn = () => {
+    //     axios.post('https://www.linkedin.com/oauth/v2/accessToken', {
+    //         headers: {
+    //             'Content-Type': 'application/ x - www - form - urlencoded',
+    //             grant_type: "client_credentials",
+    //             client_id: "866rdyg06xl0uj",
+    //             client_secret: 'SeI7gkxnU2O0UIVU',
+    //         }
+    //     }).then((res)=>console.log('response',res))
+    // }
 
     return (
         <>
@@ -67,7 +67,7 @@ const LinkedInButton = ({ user, setUser }) => {
             >
                 <LinkedInLoginButton  />
             </LoginSocialLinkedin>
-            <button onClick={loginWithLinkedIn} >Click</button>
+            {/* <button onClick={loginWithLinkedIn} >Click</button> */}
         </>
     )
 }
