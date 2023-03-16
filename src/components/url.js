@@ -1,0 +1,1 @@
+// https://api.instagram.com/oauth/authorize?client_id=5829121257185821&redirect_uri=http://localhost:3000/&scope=user_profile,user_media&response_type=code

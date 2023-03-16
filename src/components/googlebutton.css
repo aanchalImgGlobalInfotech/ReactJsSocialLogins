@@ -1,0 +1,26 @@
+.google-button {
+    box-shadow: rgb(0 0 0 / 50%) 0px 1px 2px;
+    background-color: white;
+    border-radius: 20px;
+    width: 290px;
+    min-width: 200px;
+    margin: 0 0 0 6px;
+    color: gray;
+
+
+}
+
+.button {
+    /* padding: 10px 40px 10px 40px; */
+    padding: 10px 30px 10px 20px;
+    border: none;
+    background-color: white;
+    font-size: 16px;
+    color: gray;
+
+
+}
+
+.my-icon {
+    margin: 0 15px 0 15px;
+}
